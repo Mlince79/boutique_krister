@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Luckiest+Guy&family=Oswald&family=Roboto:wght@300&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/ben-hershey-tennis.jpg') no-repeat fixed;
+    background-size: cover;
+    height: calc(50vh - 1px);
+    color: #555;
+    font-family: 'Lato';
+}
+
+/* from Bulma */
+/*This icon class from another CSS framework similar to bootstrap called Bulma
+Which will ensure that whenever we use font awesome icons.
+They will always stay perfectly centred and have a consistent size
+unless we manually change it.*/
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    color:#213476;
+}
+
+#brand{
+    color:  rgb(243, 131, 4);
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: 400;
+}
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: rgb(243, 131, 4);
+    color: white;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: rgb(243, 131, 4);
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: rgb(179, 102, 3);
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.bg-black {
+    background: rgb(243, 131, 4) !important;
+}
+
+.text-white {
+    color: whitesmoke!important;
+}
+
+.text-orange {
+    color:  rgb(243, 131, 4)!important;
+}
+
+.border-black {
+    border: 1px solid rgb(243, 131, 4) !important;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        display: contents;
+    }
+}
