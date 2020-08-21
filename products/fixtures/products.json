@@ -1,0 +1,30 @@
+[
+   {
+      "pk":1,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5001340155",
+         "name":"HEAD Tour,  4-pack",
+         "description":" HEADs bästa boll som tidigare hette HEAD ATP men som nu heter Head Tour, slitstark och skön komfort. Denna boll passar bäst för inomhusspel medans vi rekommenderar Babolat Roland Garros för utomhusspel på grus.1 rör innehåller 4 st tennisbollar.",
+         "price":120,
+         "category":1,
+         "rating":4.6,
+         "image_url":"https://cdn.shopify.com/s/files/1/0287/9556/8181/products/570714_4B_Head_Tour_12DZ_xxx_1_1800x1800.jpg?v=1587906823 ",
+         "image":"head_tour.jpg"
+      }
+   },
+   {
+      "pk":2,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5001600425",
+         "name":"RS Tour Edition,  4-pack",
+         "description":"Straight-leg styling and on-the-job comfort make our Audra pants a flattering business decision. flat front zip fly with hook-and-bar closure 2 front and 2 back welt pockets 34 1/2\" inseam polyester/rayon/spandex washable imported",
+         "price":120,
+         "category":1,
+         "rating":4.6,
+         "image_url":" https://www.racketspecialisten.se/_files/ProductMedia/5941_14710.jpg ",
+         "image":"tour_edition.jpg"
+      }
+   }
+]
