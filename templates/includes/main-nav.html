@@ -1,7 +1,7 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="nav-link text-orange mr-5 font-weight-bold text-uppercase" href="#" id="sortera-efter-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link text-orange mr-5 font-weight-bold text-uppercase" href="#" id="produkttyp-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Produkttyp
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
@@ -13,20 +13,45 @@
                 <a href="{% url 'products' %}" class="dropdown-item">Se alla</a>
             </div>
         </li>
-
         <li class="nav-item dropdown">
-            <a class="nav-link text-orange mr-5 font-weight-bold text-uppercase" href="#" id="kläder-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Kläder
+            <a class="nav-link text-orange mr-5 font-weight-bold text-uppercase" href="#" id="dam-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dam
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Toppar</a>
-                <a href="" class="dropdown-item">Shorts &amp; kjolar </a>
-                <a href="" class="dropdown-item">Klänningar</a>
-                <a href="" class="dropdown-item">Jackor</a>
-                <a href="" class="dropdown-item">Skor</a>
+                <a href="{% url 'products' %}?category=toppar_dam" class="dropdown-item">Toppar</a>
+                <a href="{% url 'products' %}?category=shorts_kjolar"class="dropdown-item">Shorts &amp; kjolar</a>
+                <a href="{% url 'products' %}?category=klänningar" class="dropdown-item">Klänningar</a>
+                <a href="{% url 'products' %}?category=jackor" class="dropdown-item">Jackor</a>
+                <a href="{% url 'products' %}?category=skor" class="dropdown-item">Skor</a>
+                <a href="{% url 'products' %}" class="dropdown-item">Allt</a>
             </div>
         </li>
-
+        <li class="nav-item dropdown">
+            <a class="nav-link text-orange mr-5 font-weight-bold text-uppercase" href="#" id="herr-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Herr
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+                <a href="{% url 'products' %}?category=toppar_herr" class="dropdown-item">Toppar</a>
+                <a href="{% url 'products' %}?category=shorts_kjolar"class="dropdown-item">Shorts &amp; kjolar</a>
+                <a href="{% url 'products' %}?category=klänningar" class="dropdown-item">Klänningar</a>
+                <a href="{% url 'products' %}?category=jackor" class="dropdown-item">Jackor</a>
+                <a href="{% url 'products' %}?category=skor" class="dropdown-item">Skor</a>
+                <a href="{% url 'products' %}" class="dropdown-item">Allt</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link text-orange mr-5 font-weight-bold text-uppercase" href="#" id="barn-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Barn
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+                <a href="{% url 'products' %}?category=toppar_barn" class="dropdown-item">Toppar</a>
+                <a href="{% url 'products' %}?category=shorts_kjolar_barn"class="dropdown-item">Shorts &amp; kjolar</a>
+                <a href="{% url 'products' %}?category=klänningar_barn" class="dropdown-item">Klänningar</a>
+                <a href="{% url 'products' %}?category=jackor_barn" class="dropdown-item">Jackor</a>
+                <a href="{% url 'products' %}?category=skor_barn" class="dropdown-item">Skor</a>
+                <a href="{% url 'products' %}?category=skor_barn,toppar_barn,shorts_kjolar_barn,klänningar_barn,jackor_barn" class="dropdown-item">Allt</a>
+            </div>
+        </li>
         <li class="nav-item dropdown">
             <a class="nav-link text-orange font-weight-bold text-uppercase" href="#" id="erbjudanden-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Erbjudanden

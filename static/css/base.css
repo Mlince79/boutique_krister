@@ -89,6 +89,27 @@ unless we manually change it.*/
 	z-index: -1;
 }
 
+.link-home {
+    color: rgb(243, 131, 4);
+}
+
+a.category-badge > span.badge:hover {
+    background: #213476 !important;
+    color: #fff !important;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

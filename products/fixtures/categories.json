@@ -6,5 +6,61 @@
       "name": "tennisbollar",
       "friendly_name": "Tennisbollar"
     }
+  },
+  {
+    "pk": 2,
+    "model": "products.category",
+    "fields": {
+      "name": "toppar_dam",
+      "friendly_name": "Toppar dam"
+    }
+  },
+    {
+    "pk": 3,
+    "model": "products.category",
+    "fields": {
+      "name": "toppar_herr",
+      "friendly_name": "Toppar herr"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.category",
+    "fields": {
+      "name": "toppar_barn",
+      "friendly_name": "Toppar"
+    }
+  },
+    {
+    "pk": 5,
+    "model": "products.category",
+    "fields": {
+      "name": "shorts_kjolar_barn",
+      "friendly_name": "Shorts & kjolar"
+    }
+  },
+    {
+    "pk": 6,
+    "model": "products.category",
+    "fields": {
+      "name": "klänningar_barn",
+      "friendly_name": "Klänningar"
+    }
+  },
+    {
+    "pk": 7,
+    "model": "products.category",
+    "fields": {
+      "name": "jackor_barn",
+      "friendly_name": "Jackor"
+    }
+  },
+    {
+    "pk": 8,
+    "model": "products.category",
+    "fields": {
+      "name": "skor_barn",
+      "friendly_name": "Skor"
+    }
   }
 ]
