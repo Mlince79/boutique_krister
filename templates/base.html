@@ -85,7 +85,7 @@
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
+                                        {{ grand_total|floatformat:2 }}kr
                                     {% else %}
                                         0.00 kr
                                     {% endif %}
@@ -107,7 +107,7 @@
         </div>
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-white text-uppercase">
-                <h4 class="my-1">Gratis standardleverans på alla beställningar över {{free_shipping_threshold}}kr</h4>
+                <h4 class="my-1">Gratis standardleverans på alla beställningar över {{free_delivery_threshold}}kr</h4>
             </div>
         </div>
     </header>
