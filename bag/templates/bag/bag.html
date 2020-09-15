@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -15,7 +16,7 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">Shopping Bag</h2>
+                <h2 class="logo-font mb-4">Din varukorg</h2>
                 <hr>
             </div>
         </div>
@@ -27,11 +28,11 @@
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
                                 <tr>
-                                    <th scope="col">Product Info</th>
+                                    <th scope="col">Beskrivning</th>
                                     <th scope="col"></th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Qty</th>
-                                    <th scope="col">Subtotal</th>
+                                    <th scope="col">Pris</th>
+                                    <th scope="col">Antal</th>
+                                    <th scope="col"></th>
                                 </tr>
                             </thead>
 
@@ -42,14 +43,14 @@
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                        <p class="my-0"><strong>Size: </strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+                                        <p class="my-0"><strong>Storlek: </strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
                                         <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.product.price }}</p>
+                                        <p class="my-0">{{ item.product.price }}kr</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <form class="form update-form" method="POST" action="">
+                                        <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                             {% csrf_token %}
                                             <div class="form-group">
                                                 <div class="input-group">
@@ -79,22 +80,22 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
+                                        <a class="update-link text-info"><small>Ändra antal</small></a>
+                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Ta bort</small></a>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.product.price }}</p>
+                                        <p class="my-0">{{ item.product.price| calc_subtotal:item.quantity }}kr</p>
                                     </td>
                                 </tr>
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                                    <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                                    <h6><strong>Varukostnad: {{ total|floatformat:2 }}kr</strong></h6>
+                                    <h6>Leverans: {{ delivery|floatformat:2 }}kr</h6>
+                                    <h4 class="mt-4"><strong>Totalsumma: {{ grand_total|floatformat:2 }}kr</strong></h4>
                                     {% if free_delivery_delta > 0 %}
                                         <p class="mb-1 text-danger">
-                                            You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                                            Du har fri frakt till postombud om du spenderar <strong>{{ free_delivery_delta }}kr</strong> mer!
                                         </p>
                                     {% endif %}
                                 </td>
@@ -105,10 +106,10 @@
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
-                                        <span class="text-uppercase">Keep Shopping</span>
+                                        <span class="text-uppercase">Fortsätt handla</span>
                                     </a>
                                     <a href="" class="btn btn-black rounded-0 btn-lg">
-                                        <span class="text-uppercase">Secure Checkout</span>
+                                        <span class="text-uppercase">Till Kassan</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
                                         </span>
@@ -118,12 +119,12 @@
                         </table>
                     </div>
                 {% else %}
-                    <p class="lead mb-5">Your bag is empty.</p>
+                    <p class="lead mb-5">Din varukorg är tom.</p>
                     <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
-                        <span class="text-uppercase">Keep Shopping</span>
+                        <span class="text-uppercase"></span>
                     </a>
                 {% endif %}
             </div>
@@ -146,9 +147,9 @@
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('size');
-        var url = `/bag/remove/${itemId}`;
-        var data = {'csrfmiddlewaretoken': csrfToken, 'size': size};
+        var size = $(this).data('product_size');
+        var url = `/bag/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
 
         $.post(url, data)
          .done(function() {
