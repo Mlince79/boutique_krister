@@ -1,0 +1,129 @@
+[
+   {
+      "pk":1,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5001340155",
+         "name":"HEAD Tour,  4-pack",
+         "description":"HEADs bästa boll som tidigare hette HEAD ATP men som nu heter Head Tour, slitstark och skön komfort. Denna boll passar bäst för inomhusspel medans vi rekommenderar Babolat Roland Garros för utomhusspel på grus.1 rör innehåller 4 st tennisbollar.",
+         "price":120,
+         "category":1,
+         "rating":4.6,
+         "image_url":"https://cdn.shopify.com/s/files/1/0287/9556/8181/products/570714_4B_Head_Tour_12DZ_xxx_1_1800x1800.jpg?v=1587906823",
+         "image":"head_tour.jpg"
+      }
+   },
+   {
+      "pk":2,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5001600425",
+         "name":"RS Tour Edition,  4-pack",
+         "description":"Robin Söderling har tagit fram ytterligare en mycket bra tennisboll med fina egenskaper. Bollen är något snabbare än RS All Court Black Edition och lämpar sig till medelgoda motionärer och tävlingsspelare.",
+         "price":130,
+         "category":1,
+         "rating":3.6,
+         "image_url":" https://www.racketspecialisten.se/_files/ProductMedia/5941_14710.jpg",
+         "image":"tour_edition.jpg"
+      }
+   },
+      {
+      "pk":3,
+      "model":"products.product",
+      "fields":{
+         "sku":"FK6971",
+         "name":"3 Stripes Club Tee Vit",
+         "description":"EN SNABBTORKANDE T-SHIRT FÖR TENNISBANAN. Behåll kontrollen när pressen ökar. Denna kortärmade tenniströja i mjukt och fuktavledande material håller dig bekväm på banan. Skuren i en smal, strömlinjeformad passform.",
+         "price":429,
+         "category":2,
+         "rating":4.6,
+         "image_url":"https://assets.adidas.com/images/h_2000,f_auto,q_auto:sensitive,fl_lossy/c2ee88066b2b46f890eeaabf00db6243_9366/3_Stripes_Club_Tee_Vit_FK6971_FK6971_21_model.jpg",
+         "image":"3_stripes_club_tee_vit.jpg"
+      }
+   },
+      {
+      "pk":4,
+      "model":"products.product",
+      "fields":{
+         "sku":"CW1202",
+         "name":"3 Stripes Tee Svart",
+         "description":"EN T-SHIRT I BOMULL INSPIRERAD AV RETRO 70-TALSMODE. Denna ikoniska och kortärmade 3-Stripes-tröja blev en omedelbar klassiker när den debuterade 1973. Den har uppdaterats för dagens gator, men är trogen sina adidasrötter. Denna T-shirt är gjord i mjuk bomullstrikå.",
+         "price":299,
+         "category":3,
+         "rating":4.6,
+         "image_url":"https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/7faf852ad1604a01808fa83500d479d7_9366/3_Stripes_Tee_Svart_CW1202_21_model.jpg",
+         "image":"3_stripes_tee_svart.jpg"
+      }
+   },
+      {
+      "pk":5,
+      "model":"products.product",
+      "fields":{
+         "sku":"DV2829",
+         "name":"Trefoil Tee Svart",
+         "description":"EN T-SHIRT I BOMULL MED STOR LOGGA FRAMTILL. En sportfavorit med extra attityd. Denna T-shirt för baby pryds av en stor Trefoil-logga med klassisk adidas Originals-stil. Tyget i bomullstrikå ger T-shirten en mjuk och len känsla.",
+         "price":159,
+         "category":4,
+         "rating":4.6,
+         "image_url":"https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/e4304b9d41284c70a9a4a93001406ac4_9366/Trefoil_Tee_Svart_DV2829_DV2829_01_laydown.jpg",
+         "image":"trefoil_tee_svart.jpg"
+      }
+   },
+      {
+      "pk":6,
+      "model":"products.product",
+      "fields":{
+         "sku":"FK7145",
+         "name":"Club Skirt Vit",
+         "description":"EN SNABBTORKANDE KJOL FÖR TENNISBANAN. Behåll kontrollen när motståndaren ökar trycket. Denna tighta tenniskjol med strömlinjeformad passform är gjord i ett mjukt material som leder bort svett från huden för en torr känsla under hela matchen. Den breda linningen och de inbyggda tightsen ger extra komfort och täckning.",
+         "price":299,
+         "category":5,
+         "rating":4.6,
+         "image_url":"https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/d684bc093e374dad837eaaf000ec4fd3_9366/Club_Skirt_Vit_FK7145_FK7145_01_laydown.jpg",
+         "image":"club_skirt_vit.jpg"
+      }
+   },
+      {
+      "pk":7,
+      "model":"products.product",
+      "fields":{
+         "sku":"FM5653",
+         "name":"Skater Dress Svart_",
+         "description":"FRÄSCHA SKATEVIBBAR INSPIRERAR DENNA KLÄNNING MED ADIDAS TREFOIL. Fram med brädan. I denna skateboard-inspirerade klänning för ungdomar sköter stilen sitt jobb. En stor Trefoil ståtar mitt frampå. Axlarna har kontrasterande 3-Stripes. Stretchig bomull gör dagen behaglig.",
+         "price":299,
+         "category":6,
+         "rating":4.6,
+         "image_url":"https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/c711a5b40c6242bca00aaaf0010e7013_9366/Skater_Dress_Svart_FM5653_FM5653_01_laydown.jpg",
+         "image":"skater_dress_svart.jpg"
+      }
+   },
+      {
+      "pk":8,
+      "model":"products.product",
+      "fields":{
+         "sku":"697853",
+         "name":"Vrct Jacka",
+         "description":"Cool jacka för aktiv lek",
+         "price":699,
+         "category":7,
+         "rating":4.6,
+         "image_url":"https://www.afound.com/globalassets/1/kids/active-outerwear/jackets/697853_15b63905a4b0e198ac810db56f5e57da.jpg?preset=product-details-desktop",
+         "image":"jacka.jpg"
+      }
+   },
+      {
+      "pk":9,
+      "model":"products.product",
+      "fields":{
+         "sku":"935905",
+         "name":"X_plr Shoes",
+         "description":"Ventilerande mesh övre och textilfoder samt EVA-mellansula för ett mjukt steg. Konstläder på häl för en snygg och modern touch.",
+         "price":299,
+         "category":8,
+         "rating":4.6,
+         "image_url":"https://www.afound.com/globalassets/1/kids/shoes/935905_ca6c897bc11a401d2a94c43e055e1543.jpg?preset=product-details-desktop",
+         "image":"skor.jpg"
+      }
+   }
+
+]
